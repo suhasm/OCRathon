@@ -1,2 +1,4 @@
 txt_files/
 key.json
+errored_files.log
+processed_files.log
