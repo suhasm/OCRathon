@@ -1,9 +1,11 @@
 # OCRathon: OCR Pipeline Using Google Vision
 
-* Python script to perform OCR using the Google Cloud Vision API. 
-* Files are stored on Google Cloud Storage bucket, and jobs are sent concurrently to speed up the process.
+* Python script to perform OCR on a large number of pdfs using Google Cloud Vision API. 
+* pdfs need to be stored in a Google Cloud Storage bucket. 
+* Jobs are sent concurrently to Google Vision to speed up the process.
 * I upload files to Google Cloud by dropping them into a folder on my Synology NAS (using its Cloud Sync tool).
- 
+* Output is a .txt file in a local folder txt_files/
+
 ## Prerequisites
 
 Ensure the following before you proceed:
