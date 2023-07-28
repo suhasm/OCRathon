@@ -18,11 +18,13 @@ create_log_file_if_not_exists()
 # Make sure the errored log file exists
 create_error_log_if_not_exists()
 
-print("reached here")
+print(f"Looking for files in bucket titled {bucket} ")
 
 # Recursively list all pdfs in the bucket
 pdf_list, txt_list = list_blobs(bucket)
-print(f"There are {len(pdf_list)} pdfs in the bucket {bucket}")
+print(f"There are {len(pdf_list)} pdfs in the bucket {bucket} in total.")
+print(f"Of these, the following are yet to be OCRed:")
+
 
 #Make list of paths of all pdfs in bucket
 pdf_path_list = ['gs://' + bucket + '/' + filename for filename in pdf_list]
@@ -33,7 +35,7 @@ filtered_pdf_path_list = [path for path in pdf_path_list
 
 for x in filtered_pdf_path_list:
     print (x)
-input()
+input("Start the OCR on these files?")
 
 #OCR(smaller_list[3], txt_file_path)
 

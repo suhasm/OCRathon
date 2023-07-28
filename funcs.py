@@ -68,17 +68,6 @@ def list_blobs(bucket_name):
 
     return pdf_list,txt_list
 
-# How does this OCR work?
-# You put all your pdf files into one folder, and upload that folder to google drive.
-# In the input file, give the path to that folder in line 1, and the just names of the pdfs, including extension later.
-# Output will be written to folders made inside your primary folder. The folders will have the same name as the pdf.
-
-#This function parses the provided input text file which contains paths to pdfs in the Google Bucket.
-#It returns 1. complete_pdf_path_list, which contains paths to all the pdfs, 2. path to just the bucket.
-
-#This function parses the provided input text file which contains paths to pdfs in the Google Bucket.
-#It returns 1. complete_pdf_path_list, which contains paths to all the pdfs, 2. path to just the bucket.
-
 def parse_input_txt(input_txt_name):
 
     with open(input_txt_name) as file:
